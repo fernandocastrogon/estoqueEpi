@@ -1,22 +1,72 @@
-import java.util.Date;
+import java.time.LocalDate;
 
-public class Epi extends CategoriaEpi{
 
+public class Epi{
+
+    public String categoria;
     public int ca;
-    public Date validadeCa;
+    public String descricao;
+    public LocalDate validadeCa;
+    public float quantidade;
 
 
-    public Epi(String categoria,int ca, Date validadeCa){
 
-        this.ca = ca;
-        this.validadeCa = validadeCa;
-        super.categoria = categoria;
 
+    public Epi(String categoria,int ca, String descricao, int quantidadeInicial, LocalDate validadeCa){
+        setCategoria(categoria);
+        setCa(ca);
+        setQuantidade(quantidadeInicial);
+        setDescricao(descricao);
+        setValidadeCa(validadeCa);
+    }
+
+    @Override
+    public String toString() {
+        return "Categoria: " + getCategoria() + ", Descrição: " + getDescricao() +
+                ", C.A: " + getCa() + ", Quantidade atual em estoque: " + getQuantidade() +
+                ", Validade C.A.: " + getValidadeCa();
     }
 
 
 
 
+    public String getCategoria() {
+            return categoria;
+    }
 
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
 
+    public int getCa() {
+        return ca;
+    }
+
+    public void setCa(int ca) {
+        this.ca = ca;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public LocalDate getValidadeCa() {
+        return validadeCa;
+    }
+
+    public void setValidadeCa(LocalDate validadeCa) {
+        this.validadeCa = validadeCa;
+    }
+
+    public float getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(float quantidade) {
+        this.quantidade = quantidade;
+    }
 }

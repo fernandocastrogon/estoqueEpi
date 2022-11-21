@@ -1,5 +1,5 @@
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
@@ -7,17 +7,20 @@ public class TesteEstoque {
 
     public static void main(String[] args) {
 
+
         Scanner leitor = new Scanner(System.in);
-        List<Epi> epis = new ArrayList<Epi>();
+        //Criando ArrayList para estoque de EPIs
+        List<Epi> epis = new ArrayList<>();
 
 
-        Epi capacete = new Epi("Proteção para a cabeça", 465,"Capacete MSA Verde", 1,new java.util.Date());
+        //Cadastrando EPIs
+        Epi capacete = new Epi("Proteção para a cabeça", 465,"Capacete MSA Verde", 1,LocalDate.of(2024,10,29));
         epis.add(capacete);
-        Epi sapato = new Epi("Proteção para os pés", 42239,"Sapato com biqueira PVC Bracol", 2,new Date(20/11/2025));
+        Epi sapato = new Epi("Proteção para os pés", 42239,"Sapato com biqueira PVC Bracol", 2, LocalDate.of(2023,10,30));
         epis.add(sapato);
 
 
-
+        // Buscando EPI por C.A.
         System.out.println("Digite o CA do EPI que deseja buscar: ");
         int ca = leitor.nextInt();
         //String buscaCa = String.valueOf(ca);
@@ -27,10 +30,7 @@ public class TesteEstoque {
                 posicao = i;
             }
         }
-
-        Epi ItemPesquisado = epis.get(posicao);
-
-        System.out.println(ItemPesquisado);
+        System.out.println(epis.get(posicao));
 
 
 
