@@ -40,20 +40,18 @@ public class TesteEstoque {
 
         //Comando de ordenação natural
         Collections.sort(epis);
-
-
         System.out.println(epis);
 
     }
 
 
-//    class CAComparator implements Comparator<Epi> {
-//        //Ordenando Lista pelo C.A.
-//        @Override
-//        public int compare(Epi ca1, Epi ca2) {
-//
-//            return Integer.compare(ca1.getCa(), ca2.getCa());
-//
-//        }
-//    }
+    class CAComparator implements Comparator<Epi> {
+        //Ordenando Lista pelo C.A.
+        @Override
+        public int compare(Epi ca1, Epi ca2) {
+
+            return Integer.compare(ca1.getCa(), ca2.getCa());
+
+        }
+    }
 }
