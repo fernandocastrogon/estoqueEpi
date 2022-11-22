@@ -40,19 +40,18 @@ public class TesteEstoque {
 
         //Comando de ordenacao atraves da validade do CA
         System.out.println("----Lista ordenada pela validade do CA----");
-        epis.sort(new ValidadeCaComparator());
-        System.out.println(epis);
+
+        //Ordenando Lista pela data através de lambda
+        epis.sort((Epi ca1, Epi ca2) -> ca1.getValidadeCa().compareTo(ca2.getValidadeCa()));
+
+        //Ordenando Lista pela data através do metodo comparing da interface Comparator
+        //epis.sort(Comparator.comparing(Epi::getValidadeCa));
+
+        //Imprimindo lista através de lambda
+        epis.forEach((Epi) -> System.out.println(Epi.getValidadeCa()));
+
 
     }
 }
 
-    class ValidadeCaComparator implements Comparator<Epi> {
-        //Ordenando Lista pela data.
-        @Override
-        public int compare(Epi ca1, Epi ca2) {
-
-            return ca1.getValidadeCa().compareTo(ca2.getValidadeCa());
-
-        }
-    }
 
