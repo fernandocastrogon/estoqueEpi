@@ -33,25 +33,26 @@ public class TesteEstoque {
         System.out.println(epis.get(posicao));
 
 
-        //Testando ordem natural implementado na classe Epi
-        System.out.println("Lista completa sem ordenar");
-        System.out.println(epis);
-        System.out.println("----Ordenando pelo C.A----");
-
         //Comando de ordenação natural
+        System.out.println("----Lista ordenada pelo C.A----");
         Collections.sort(epis);
         System.out.println(epis);
 
+        //Comando de ordenacao atraves da validade do CA
+        System.out.println("----Lista ordenada pela validade do CA----");
+        epis.sort(new ValidadeCaComparator());
+        System.out.println(epis);
+
     }
+}
 
-
-    class CAComparator implements Comparator<Epi> {
-        //Ordenando Lista pelo C.A.
+    class ValidadeCaComparator implements Comparator<Epi> {
+        //Ordenando Lista pela data.
         @Override
         public int compare(Epi ca1, Epi ca2) {
 
-            return Integer.compare(ca1.getCa(), ca2.getCa());
+            return ca1.getValidadeCa().compareTo(ca2.getValidadeCa());
 
         }
     }
-}
+
