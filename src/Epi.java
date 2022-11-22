@@ -1,7 +1,8 @@
 import java.time.LocalDate;
 
 
-public class Epi{
+
+public class Epi implements Comparable<Epi> {
 
     public String categoria;
     public int ca;
@@ -10,9 +11,7 @@ public class Epi{
     public float quantidade;
 
 
-
-
-    public Epi(String categoria,int ca, String descricao, int quantidadeInicial, LocalDate validadeCa){
+    public Epi(String categoria, int ca, String descricao, int quantidadeInicial, LocalDate validadeCa) {
         setCategoria(categoria);
         setCa(ca);
         setQuantidade(quantidadeInicial);
@@ -28,10 +27,8 @@ public class Epi{
     }
 
 
-
-
     public String getCategoria() {
-            return categoria;
+        return categoria;
     }
 
     public void setCategoria(String categoria) {
@@ -68,5 +65,11 @@ public class Epi{
 
     public void setQuantidade(float quantidade) {
         this.quantidade = quantidade;
+    }
+
+    //Definindo a ordem natural da Classe EPI
+    @Override
+    public int compareTo(Epi outra) {
+        return Integer.compare(this.ca, outra.ca);
     }
 }
