@@ -1,1 +1,3 @@
-[Categoria: Proteção para a cabeça, Descrição: Capacete MSA Verde, C.A: 465, Quantidade atual em estoque: 1.0, Validade C.A.: 2024-10-29, Categoria: Proteção para os pés, Descrição: Sapato com biqueira PVC Bracol, C.A: 42239, Quantidade atual em estoque: 2.0, Validade C.A.: 2023-10-30, Categoria: Proteção para as maos, Descrição: Luva pigmentada, C.A: 34474, Quantidade atual em estoque: 1.0, Validade C.A.: 2024-06-20]
+Categoria: Proteção para a cabeça, Descrição: Capacete MSA Verde, C.A: 465, Quantidade atual em estoque: 1.0, Validade C.A.: 2024-10-29
+Categoria: Proteção para os pés, Descrição: Sapato com biqueira PVC Bracol, C.A: 42239, Quantidade atual em estoque: 2.0, Validade C.A.: 2023-10-30
+Categoria: Proteção para as maos, Descrição: Luva pigmentada, C.A: 34474, Quantidade atual em estoque: 1.0, Validade C.A.: 2024-06-20

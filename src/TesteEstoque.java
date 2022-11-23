@@ -22,10 +22,9 @@ public class TesteEstoque {
         epis.add(luva);
 
         //Cadastrando EPIs em um arquivo .txt
-
         PrintWriter pw = new PrintWriter("listaEpis.txt");
-        pw.println(epis);
-        System.out.println("Lista gravada no arquivo.txt");
+        //Loop para gravação dos Epis na listaEpis.txt
+        epis.forEach((Epi) -> pw.println(Epi));
         pw.close();
 
 
