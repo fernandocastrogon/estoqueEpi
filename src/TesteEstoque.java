@@ -1,9 +1,11 @@
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.time.LocalDate;
 import java.util.*;
 
 public class TesteEstoque {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
 
         Scanner leitor = new Scanner(System.in);
@@ -18,6 +20,14 @@ public class TesteEstoque {
         epis.add(sapato);
         Epi luva = new Epi("Proteção para as maos", 34474, "Luva pigmentada", 1, LocalDate.of(2024, 6, 20));
         epis.add(luva);
+
+        //Cadastrando EPIs em um arquivo .txt
+
+        PrintWriter pw = new PrintWriter("listaEpis.txt");
+        pw.println(epis);
+        System.out.println("Lista gravada no arquivo.txt");
+        pw.close();
+
 
 
         // Buscando EPI por C.A.
@@ -49,6 +59,11 @@ public class TesteEstoque {
 
         //Imprimindo lista através de lambda
         epis.forEach((Epi) -> System.out.println(Epi.getValidadeCa()));
+
+        leitor.close();
+
+
+
 
 
     }
