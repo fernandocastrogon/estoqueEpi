@@ -3,11 +3,15 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.time.LocalDate;
 import java.util.*;
+import java.util.List;
 
-public class TesteEstoque {
+
+public class TesteEstoqueEPI {
+
 
     public static void main(String[] args) throws IOException {
 
+        new Menu();
 
         Scanner leitorTeclado = new Scanner(System.in);
         //Criando ArrayList para estoque de EPIs
@@ -21,6 +25,7 @@ public class TesteEstoque {
 
             //Criando scanner e definindo metodo de separacao
             Scanner linhaScanner = new Scanner(linha);
+            linhaScanner.useLocale(Locale.US);
             linhaScanner.useDelimiter(",");
 
             //Lendo dados da linha do arquivo epis.csv para criacao de novo Epi
