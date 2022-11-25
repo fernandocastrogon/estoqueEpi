@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.time.LocalDate;
 
 
@@ -9,6 +10,10 @@ public class Epi implements Comparable<Epi> {
     public String descricao;
     public LocalDate validadeCa;
     public float quantidade;
+    private JTextField recebeDescricaoEpi;
+    private JTextField recebeCA;
+    private JTextField recebeCategoria;
+    private JTextField recebeQuantidade;
 
 
     public Epi(String categoria, int ca, String descricao, int quantidadeInicial, LocalDate validadeCa) {

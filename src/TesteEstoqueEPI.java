@@ -11,7 +11,7 @@ public class TesteEstoqueEPI {
 
     public static void main(String[] args) throws IOException {
 
-        new Menu();
+        //new Menu();
 
         Scanner leitorTeclado = new Scanner(System.in);
         //Criando ArrayList para estoque de EPIs
