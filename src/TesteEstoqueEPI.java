@@ -11,7 +11,6 @@ public class TesteEstoqueEPI {
 
     public static void main(String[] args) throws IOException {
 
-        //new Menu();
 
         Scanner leitorTeclado = new Scanner(System.in);
         //Criando ArrayList para estoque de EPIs
@@ -37,29 +36,26 @@ public class TesteEstoqueEPI {
             int mes = linhaScanner.nextInt();
             int dia = linhaScanner.nextInt();
             epis.add(new Epi(categoria,ca,descricao,quantidadeInicial,LocalDate.of(ano,mes,dia)));
-            System.out.println(epis);
             linhaScanner.close();
-//            String[] valores = linha.split(",");
-//            System.out.println(valores[0]);
         }
         leitorArquivo.close();
 
 
 
 
-        //Cadastrando EPIs
-        Epi capacete = new Epi("Proteção para a cabeça", 465, "Capacete MSA Verde", 1, LocalDate.of(2024, 10, 29));
-        epis.add(capacete);
-        Epi sapato = new Epi("Proteção para os pés", 42239, "Sapato com biqueira PVC Bracol", 2, LocalDate.of(2023, 10, 30));
-        epis.add(sapato);
-        Epi luva = new Epi("Proteção para as maos", 34474, "Luva pigmentada", 1, LocalDate.of(2024, 6, 20));
-        epis.add(luva);
+//        //Cadastrando EPIs
+//        Epi capacete = new Epi("Proteção para a cabeça", 465, "Capacete MSA Verde", 1, LocalDate.of(2024, 10, 29));
+//        epis.add(capacete);
+//        Epi sapato = new Epi("Proteção para os pés", 42239, "Sapato com biqueira PVC Bracol", 2, LocalDate.of(2023, 10, 30));
+//        epis.add(sapato);
+//        Epi luva = new Epi("Proteção para as maos", 34474, "Luva pigmentada", 1, LocalDate.of(2024, 6, 20));
+//        epis.add(luva);
 
-        //Cadastrando EPIs em um arquivo .txt
-        PrintWriter pw = new PrintWriter("listaEpis.txt");
-        //Loop para gravação dos Epis na listaEpis.txt
-        epis.forEach(pw::println);
-        pw.close();
+//        //Cadastrando EPIs em um arquivo .txt
+//        PrintWriter pw = new PrintWriter("listaEpis.txt");
+//        //Loop para gravação dos Epis na listaEpis.txt
+//        epis.forEach(pw::println);
+//        pw.close();
 
 
 

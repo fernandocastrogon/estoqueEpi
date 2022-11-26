@@ -10,10 +10,6 @@ public class Epi implements Comparable<Epi> {
     public String descricao;
     public LocalDate validadeCa;
     public float quantidade;
-    private JTextField recebeDescricaoEpi;
-    private JTextField recebeCA;
-    private JTextField recebeCategoria;
-    private JTextField recebeQuantidade;
 
 
     public Epi(String categoria, int ca, String descricao, int quantidadeInicial, LocalDate validadeCa) {
@@ -26,10 +22,12 @@ public class Epi implements Comparable<Epi> {
 
     @Override
     public String toString() {
-        return "Categoria: " + getCategoria() + ", Descrição: " + getDescricao() +
-                ", C.A: " + getCa() + ", Quantidade atual em estoque: " + getQuantidade() +
-                ", Validade C.A.: " + getValidadeCa();
+        return getCategoria() +  "," + getCa() + "," + getDescricao()+
+                "," + getQuantidade() +
+                "," + getValidadeCa();
     }
+
+
 
 
     public String getCategoria() {
